@@ -214,6 +214,22 @@ nav {
     margin-right: var(--x-offset);
 }
 
+@keyframes zoom{
+    0%{        
+        transform: scale3d(1,1,1);
+    }
+    50%{
+        transform: scale3d(1.1,1.1,1.1);
+    }
+    100%{
+        transform: scale3d(1,1,1);
+    }
+}
+
+.stack-cards:hover,.Qcards:hover{
+    animation: zoom .5s linear 1 alternate;
+}
+
 .stack-cards * {
     margin: .1rem;
 }
