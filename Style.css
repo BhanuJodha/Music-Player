@@ -1,0 +1,663 @@
+/* Default Section */
+
+:root {
+    --theme: #0c1027;
+    --blur: #12193e;
+    --light-blur: #93a8b3;
+
+    --x-offset: 0.7rem;
+}
+
+* {
+    margin: 0rem;
+    padding: 0rem;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: white;
+}
+
+img {
+    object-fit: cover;
+    border-radius: .2rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+span,
+i:hover {
+    cursor: pointer;
+}
+
+/* Body Section */
+
+body {
+    min-height: 100vh;
+    background-color: var(--theme);
+}
+
+
+/* Main Section */
+
+main {
+    max-width: 992px;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+/* Navigation Section */
+
+nav {
+    position: sticky;
+    top: 0;
+    display: flex;
+    height: 6.5rem;
+    width: 100%;
+    justify-content: space-between;
+    z-index: 5;
+    background-image: linear-gradient(to bottom, var(--theme) 80%, transparent);
+}
+
+.nav-boxes {
+    display: flex;
+    align-items: center;
+}
+
+.nav-boxes>* {
+    margin: 1rem;
+}
+
+.nav-boxes>img {
+    height: 3.5rem;
+    width: 3.5rem;
+    border-radius: 50%;
+}
+
+#nav-box1>div {
+    font-size: 1.2rem;
+    margin-left: 0px;
+    margin-right: 3rem;
+}
+
+#nav-box1>div :first-child {
+    font-weight: 300;
+}
+
+#nav-box1>div :last-child {
+    letter-spacing: .1rem;
+    font-weight: 600;
+}
+
+
+
+#nav-box2 {
+    flex-direction: row-reverse;
+}
+
+#nav-box2>i {
+    font-size: 1.5rem;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 2rem;
+    width: 15rem;
+    background-color: var(--blur);
+    border-radius: .5rem;
+}
+
+.search>span {
+    font-weight: 200;
+}
+
+.search>i {
+    color: var(--light-blur);
+}
+
+.search input {
+    border: none;
+    background-color: transparent;
+    height: 100%;
+}
+
+.search input:focus {
+    outline: none;
+}
+
+
+/* Content Section */
+
+#content {
+    width: 70%;
+}
+
+#content>* {
+    margin-bottom: 1.5rem;
+}
+
+#content>p {
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+/* Box-Stack Section */
+
+.box-stack {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.box-stack-cards {
+    display: flex;
+    align-items: center;
+    margin-right: var(--x-offset);
+    font-size: .8rem;
+    font-weight: 200;
+    margin-bottom: 1rem;
+    flex-shrink: 1;
+    flex-grow: 1;
+    max-width: 20rem;
+    min-width: 17rem;
+}
+
+.box-stack-cards>img {
+    width: 6.5rem;
+    height: 6.5rem;
+}
+
+.box-stack-cards * {
+    color: var(--light-blur);
+}
+
+.box-stack-cards>:nth-child(2) {
+    margin-left: 1rem;
+    flex-grow: 1;
+}
+
+.box-stack-cards>:nth-child(2) :first-child {
+    color: white;
+    font-size: .9rem;
+    font-weight: 500;
+    margin-bottom: .7rem;
+}
+
+.box-stack-cards>:last-child {
+    align-self: flex-start;
+}
+
+.box-stack-cards>:last-child>span{
+    position: relative;
+}
+
+.box-stack-cards>:last-child>span:hover .dropdown{
+    display: inline-block;
+}
+
+/* Horizontal Stack Section */
+
+.stack {
+    width: 100%;
+    display: flex;
+}
+
+.stack-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: .8rem;
+    font-weight: 200;
+    margin-right: var(--x-offset);
+}
+
+.stack-cards * {
+    margin: .1rem;
+}
+
+.stack-cards>img {
+    width: 8rem;
+    height: 8.5rem;
+}
+
+.stack-cards>:last-child {
+    font-size: .7rem;
+    color: var(--light-blur);
+}
+
+
+/* Flyers Section */
+
+.flyers {
+    position: relative;
+    display: flex;
+    height: 15rem;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+
+.flyers>* {
+    position: absolute;
+    height: 60%;
+    width: 20rem;
+}
+
+.flyers>*>img {
+    object-fit: fill;
+    height: 100%;
+    width: 100%;
+    border-radius: 0%;
+}
+
+.flyers>:first-child {
+    left: 0;
+}
+
+.scale {
+    display: flex;
+    align-items: center;
+    overflow-x: hidden;
+    z-index: 1;
+    transform: scale3d(1.5, 1.5, 1.5);
+    box-shadow: 6px 0 14px -5px black, -6px 0 14px -5px black;
+}
+
+.scale>img {
+    height: 85%;
+}
+
+.scale::before {
+    position: absolute;
+    content: "";
+    display: block;
+    background: url("./Static/p2.jpg") center center /cover;
+    filter: blur(5px);
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+.flyers>:last-child {
+    right: 0;
+}
+
+
+/* Artists Section */
+
+.artists {
+    display: flex;
+}
+
+.artists>* {
+    width: 9rem;
+    font-size: .9rem;
+    font-weight: 500;
+    text-align: center;
+    margin: .5rem;
+}
+
+.artists img {
+    height: 7.5rem;
+    width: 7.5rem;
+    border-radius: 50%;
+}
+
+
+/* Categories Section */
+
+.categories {
+    display: flex;
+    align-items: center;
+    background-color: var(--blur);
+}
+
+.categories>img {
+    height: 7rem;
+    width: 10rem;
+    margin: 1rem;
+}
+
+.card-opacity {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-opacity>img {
+    height: 5rem;
+    margin: .5rem;
+    width: 5rem;
+    border-radius: 50%;
+    opacity: .6;
+}
+
+.card-opacity>span {
+    position: absolute;
+    font-weight: 500;
+    font-size: .9rem;
+    z-index: 1;
+}
+
+
+/* Clip Section */
+
+.clip {
+    display: flex;
+    align-items: center;
+}
+
+.clip>div>span {
+    font-size: 1.2rem;
+}
+
+.clip>div>img {
+    height: 8rem;
+    width: 13.5rem;
+    border-radius: 0;
+}
+
+
+/* Aside Section */
+
+aside {
+    position: sticky;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: calc(100vh - 11.5rem);
+    width: 30%;
+    top: 6.5rem;
+    overflow-y: auto;
+}
+
+#Qheading {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: .5rem;
+    width: 95%;
+    margin-bottom: .5rem;
+}
+
+#Qheading>:first-child {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+#Qheading>:last-child,#Qheading>:last-child>span{
+    font-weight: 300;
+    color: aquamarine;
+    position: relative;
+    vertical-align: middle;
+}
+
+.dropdown{
+    position: absolute;
+    display: none;
+    top: 100%;
+    right: 0%;
+    width: 11rem;
+    padding: 0 1rem;
+    background-color: white;
+}
+
+.dropdown>a{
+    width: 100%;
+    font-weight: 500;
+    font-size: 1rem;
+    padding: .5rem;
+    display: block;
+    color: black;
+    border-bottom: 1px solid black;
+}
+
+.dropdown>:last-child{
+    border-bottom: none;
+}
+
+#Qheading>:last-child:hover .dropdown{
+    display: inline-block;
+}
+
+
+.Qcards {
+    display: flex;
+    width: 90%;
+    align-items: center;
+    font-size: .7rem;
+    font-weight: 200;
+    margin: .8rem 0;
+}
+
+.Qcards :nth-child(n) {
+    margin: 0 .2rem;
+    color: var(--light-blur);
+}
+
+.Qcards>img {
+    height: 2.5rem;
+}
+
+.Qcards div {
+    flex-grow: 1;
+}
+
+.Qcards div>:first-child {
+    font-size: 1rem;
+    font-weight: 200;
+    color: white;
+}
+
+.Qcards>:last-child {
+    font-weight: 200;
+}
+
+
+/* Controller Section */
+
+.controller {
+    position: sticky;
+    z-index: 6;
+    bottom: 0;
+    width: 100%;
+    height: 4.5rem;
+    background-color: #282828;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 calc(calc(90vw - 992px) / 2);
+}
+
+.controller * {
+    color: #a4a4a4;
+    font-size: 0.7rem;
+    font-weight: 100;
+}
+
+.controller span {
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+.controller>* {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 4rem;
+    width: 15rem;
+}
+
+
+.music-card>* {
+    height: 3.5rem;
+    margin-right: .5rem;
+}
+
+.music-card>div {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.music-card>div>:first-child {
+    color: white;
+    font-size: 1rem;
+    font-weight: 300;
+    max-width: 8rem;
+    height: 1.5rem;
+    overflow: hidden;
+    box-shadow: inset -7px 0 10px -10px black;
+}
+
+
+.control {
+    width: 30rem;
+    justify-content: center;
+    align-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.control * {
+    margin: 0 .3rem;
+}
+
+.control>:nth-child(3) {
+    font-size: 2rem;
+    color: gainsboro;
+}
+
+.control div {
+    width: 100%;
+}
+
+.control div {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.control div input {
+    width: 85%;
+    height: .3rem;
+}
+
+
+.volume {
+    padding-left: 5rem;
+}
+
+.volume input {
+    width: 40%;
+    height: .3rem;
+}
+
+
+
+@media screen and (max-width:992px) {
+    #nav-box1>div {
+        margin-right: 1rem;
+    }
+
+    aside,
+    .music-card img {
+        display: none;
+    }
+
+    #content {
+        width: 90%;
+    }
+
+    .stack,
+    .clip,
+    .categories,
+    .artists {
+        flex-wrap: wrap;
+    }
+
+    .box-stack {
+        justify-content: space-evenly;
+    }
+
+    .box-stack-cards {
+        max-width: 17rem;
+        min-width: 15rem;
+    }
+
+    .box-stack-cards>:nth-child(2) {
+        margin-left: .5rem;
+    }
+
+    .controller {
+        padding: 0 0.5rem;
+    }
+
+    .volume {
+        width: 10rem;
+        padding: 0;
+    }
+
+    .music-card {
+        width: 10rem;
+    }
+
+    .control {
+        width: 20rem;
+    }
+}
+
+
+
+
+@media screen and (max-width:600px) {
+    html {
+        font-size: 10px;
+    }
+
+    .flyers>* {
+        height: 50%;
+        width: 15rem;
+    }
+
+    .artists>* {
+        width: 8rem;
+    }
+
+    .categories {
+        justify-content: space-around;
+    }
+
+    .categories>img {
+        width: 100%;
+    }
+
+    .clip {
+        justify-content: center;
+    }
+
+    .clip>div>img {
+        width: 25rem;
+    }
+
+    .controller {
+        justify-content: center;
+    }
+
+    .control {
+        width: 80%;
+    }
+
+    .search,
+    .music-card,
+    .volume {
+        display: none;
+    }
+}

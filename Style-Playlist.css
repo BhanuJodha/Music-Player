@@ -1,0 +1,575 @@
+/* Default Section */
+
+:root {
+    --theme: #0c1027;
+    --blur: #12193e;
+    --light-blur: #93a8b3;
+
+    --x-offset: 0.7rem;
+}
+
+* {
+    margin: 0rem;
+    padding: 0rem;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: white;
+}
+
+img {
+    object-fit: cover;
+    border-radius: .2rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+span,
+i:hover {
+    cursor: pointer;
+}
+
+/* Body Section */
+
+body {
+    min-height: 100vh;
+    background-color: var(--theme);
+}
+
+
+/* Main Section */
+
+main {
+    max-width: 992px;
+    min-height: calc(100vh - 6.5rem);;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+/* Navigation Section */
+
+nav {
+    position: sticky;
+    top: 0;
+    display: flex;
+    height: 6.5rem;
+    width: 100%;
+    justify-content: space-between;
+    z-index: 5;
+    background-image: linear-gradient(to bottom, var(--theme) 80%, transparent);
+}
+
+.nav-boxes {
+    display: flex;
+    align-items: center;
+}
+
+.nav-boxes>* {
+    margin: 1rem;
+}
+
+.nav-boxes>img {
+    height: 3.5rem;
+    width: 3.5rem;
+    border-radius: 50%;
+}
+
+#nav-box1>div {
+    font-size: 1.2rem;
+    margin-left: 0px;
+    margin-right: 3rem;
+}
+
+#nav-box1>div :first-child {
+    font-weight: 300;
+}
+
+#nav-box1>div :last-child {
+    letter-spacing: .1rem;
+    font-weight: 600;
+}
+
+
+
+#nav-box2 {
+    flex-direction: row-reverse;
+}
+
+#nav-box2>i {
+    font-size: 1.5rem;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 2rem;
+    width: 15rem;
+    background-color: var(--blur);
+    border-radius: .5rem;
+}
+
+.search>span {
+    font-weight: 200;
+}
+
+.search>i {
+    color: var(--light-blur);
+}
+
+.search input {
+    border: none;
+    background-color: transparent;
+    height: 100%;
+}
+
+.search input:focus {
+    outline: none;
+}
+
+
+/* Content Section */
+
+#content {
+    width: 70%;
+}
+
+#content>* {
+    margin-bottom: 1.5rem;
+}
+
+/* Box-Stack Section */
+
+.box-stack-cards {
+    display: flex;
+    align-items: center;
+    font-size: .8rem;
+    font-weight: 200;
+    margin-bottom: 1rem;
+    width: 90%;
+}
+
+.box-stack-cards>img {
+    width: 5.5rem;
+    height: 5.5rem;
+}
+
+.box-stack-cards * {
+    color: var(--light-blur);
+}
+
+.box-stack-cards>:nth-child(2) {
+    margin-left: 1rem;
+    flex-grow: 1;
+}
+
+.box-stack-cards>:nth-child(2) :first-child {
+    color: white;
+    font-size: .9rem;
+    font-weight: 500;
+    margin-bottom: .7rem;
+}
+
+.box-stack-cards>:last-child {
+    align-self: flex-start;
+}
+
+.box-stack-cards>:last-child>span{
+    position: relative;
+}
+
+.box-stack-cards>:last-child>span:hover .dropdown{
+    display: inline-block;
+}
+
+
+/* Aside Section */
+
+aside {
+    position: sticky;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: calc(100vh - 11.5rem);
+    width: 30%;
+    top: 6.5rem;
+    overflow-y: auto;
+}
+
+.Qheading {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: .5rem;
+    width: 95%;
+    margin-bottom: .5rem;
+}
+
+.Qheading>:first-child {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.Qheading>:last-child,.Qheading>:last-child>span{
+    font-weight: 300;
+    color: gray;
+    position: relative;
+    vertical-align: middle;
+}
+
+.dropdown{
+    position: absolute;
+    display: none;
+    top: 100%;
+    right: 0%;
+    width: 11rem;
+    padding: 0 1rem;
+    background-color: white;
+    z-index: 10;
+}
+
+.dropdown>a{
+    width: 100%;
+    font-weight: 500;
+    font-size: 1rem;
+    padding: .5rem;
+    display: block;
+    color: black;
+    border-bottom: 1px solid black;
+}
+
+.dropdown>:last-child{
+    border-bottom: none;
+}
+
+.Qheading>:last-child:hover .dropdown{
+    display: inline-block;
+}
+
+
+.Qcards {
+    display: flex;
+    width: 90%;
+    align-items: center;
+    font-size: .7rem;
+    font-weight: 200;
+    margin: .8rem 0;
+}
+
+.Qcards :nth-child(n) {
+    margin: 0 .2rem;
+    color: var(--light-blur);
+}
+
+.Qcards>img {
+    height: 2.5rem;
+}
+
+.Qcards div {
+    flex-grow: 1;
+}
+
+.Qcards div>:first-child {
+    font-size: 1rem;
+    font-weight: 200;
+    color: white;
+}
+
+.Qcards>:last-child {
+    font-weight: 200;
+}
+
+
+/* Controller Section */
+
+.controller {
+    position: sticky;
+    z-index: 6;
+    bottom: 0;
+    width: 100%;
+    height: 4.5rem;
+    background-color: #282828;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 calc(calc(90vw - 992px) / 2);
+}
+
+.controller * {
+    color: #a4a4a4;
+    font-size: 0.7rem;
+    font-weight: 100;
+}
+
+.controller span {
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+.controller>* {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 4rem;
+    width: 15rem;
+}
+
+
+.music-card>* {
+    height: 3.5rem;
+    margin-right: .5rem;
+}
+
+.music-card>div:first-of-type {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.music-card>:last-child{
+    display: flex;
+    align-items: center;
+}
+
+.music-card>div:nth-of-type(1)>:first-child {
+    color: white !important;
+    font-size: 1rem !important;
+    font-weight: 300 !important;
+    max-width: 8rem;
+    height: 1.5rem !important;
+    overflow: hidden;
+}
+
+
+.control {
+    width: 30rem;
+    justify-content: center;
+    align-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.control * {
+    margin: 0 .3rem;
+}
+
+.control>:nth-child(3) {
+    font-size: 2rem;
+    color: gainsboro;
+}
+
+.control div {
+    width: 100%;
+}
+
+.control div {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.control div input {
+    width: 85%;
+    height: .3rem;
+}
+
+
+.volume {
+    padding-left: 5rem;
+}
+
+.volume input {
+    width: 40%;
+    height: .3rem;
+}
+
+
+/* Artists Card */
+
+.artists-card{
+    background-color: var(--blur);
+    display: flex;
+    align-items: center;
+}
+
+.artists-card *{
+    font-size: .7rem;
+    color: #a4a4a4;
+    font-weight: 300;
+    margin-bottom: .2rem;
+}
+
+.artists-card p{
+    font-size: 1.5rem;
+    color: white;
+    font-weight: 700;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}   
+
+.artists-card>:last-child>:nth-child(3){
+    font-weight: 100;
+}
+
+.artists-card>:first-child{
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.artists-card>:first-child>img{
+    border-radius: 0;
+    height: 25rem;
+    width: 20rem;
+}
+
+.artists-card>:first-child::before{
+    content: "";
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    left: -15%;
+    height: 110%;
+    width: 130%;
+    background: radial-gradient(transparent, var(--blur) 70% );
+    z-index: 1;
+}
+
+.artists-card>:last-child{
+    flex-grow: 1;
+    display: flex;
+    padding: 1rem;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.artists-card button{
+    margin-top: 1.5rem;
+    height: 2rem;
+    width: 7rem;
+    border-radius: 0%;
+    color: white;
+    background-color: transparent;
+    border: none;
+    font-weight: 500;
+    font-size: .8rem;
+}
+
+.artists-card button:first-of-type{
+    background: linear-gradient(-45deg, purple, var(--blur));
+}
+
+.artists-card>:last-child>:last-child{
+    color: white;
+    font-weight: 100;
+}
+
+/* Stack Music-Cards Section */
+
+#content>.music-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 4rem;
+    width: 100%;
+    background-color: #1a1e33;
+    margin-bottom: .5rem;
+}
+
+#content>.music-card>:first-child{
+    height: auto;
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin: 1rem;
+}
+
+#content>.music-card * {
+    color: #a4a4a4;
+    font-size: 0.7rem;
+    font-weight: 100;
+}
+
+#content>.music-card>img{
+    height: 3rem;
+}
+
+#content>.music-card span {
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+#content>.music-card>:last-child>:first-child{
+    margin-right: 1rem;
+}
+
+
+@media screen and (max-width:992px) {
+    #nav-box1>div {
+        margin-right: 1rem;
+    }
+
+    aside,
+    .music-card img {
+        display: none;
+    }
+
+    #content {
+        width: 90%;
+    }
+
+    .box-stack {
+        justify-content: space-evenly;
+    }
+
+    .controller {
+        padding: 0 0.5rem;
+    }
+
+    .volume {
+        width: 10rem;
+        padding: 0;
+    }
+
+    .music-card {
+        width: 10rem;
+    }
+
+    .control {
+        width: 20rem;
+    }
+}
+
+
+
+
+@media screen and (max-width:600px) {
+    html {
+        font-size: 10px;
+    }
+
+    .controller {
+        justify-content: center;
+    }
+
+    .control {
+        width: 80%;
+    }
+
+    .artists-card{
+        flex-direction: column;
+    }
+
+    .artists-card>:last-child{
+        width: 80%;
+    }
+
+    .search,
+    .music-card,
+    .volume {
+        display: none;
+    }
+}
